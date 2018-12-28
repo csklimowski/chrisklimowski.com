@@ -1,0 +1,84 @@
+body {
+	background-color: #fff;
+}
+
+#words {
+	margin: 0px auto 50px auto;
+	padding-top: 50px;
+	min-width: 600px;
+	max-width: 800px;
+	text-align: center;
+	font-size: 50px;
+	color: #888;
+}
+
+#keyboard {
+	position: relative;
+	min-width: 600px;
+	max-width: 800px;
+	height: 400px;
+	margin: 0 auto;
+
+	span {
+		position: absolute;
+		text-align: center;
+		display: inline-block;
+		width: 7%;
+		height: 14%;
+		border: 4px solid #aaa;
+		color: #aaa;
+		font-size: 40px;
+		border-radius: 5px;
+		transition: top 0.3s, left 0.3s;
+		background-color: #fff;
+	}
+
+	.pressed {
+		border-color: #71dcff;
+		color: #71dcff;
+		transform: scale(1.1, 1.1);
+	}
+
+	.a {top: 2%; left: 1%;}
+	.b {top: 2%; left: 10%;}
+	.c {top: 2%; left: 19%;}
+	.d {top: 2%; left: 28%;}
+	.e {top: 2%; left: 37%;}
+	.f {top: 2%; left: 46%;}
+	.g {top: 2%; left: 55%;}
+	.h {top: 2%; left: 64%;}
+	.i {top: 2%; left: 73%;}
+	.j {top: 2%; left: 82%;}
+	.k {top: 20%; left: 4%;}
+	.l {top: 20%; left: 13%;}
+	.m {top: 20%; left: 22%;}
+	.n {top: 20%; left: 31%;}
+	.o {top: 20%; left: 40%;}
+	.p {top: 20%; left: 49%;}
+	.q {top: 20%; left: 58%;}
+	.r {top: 20%; left: 67%;}
+	.s {top: 20%; left: 76%;}
+	.t {top: 38%; left: 9%;}
+	.u {top: 38%; left: 18%;}
+	.v {top: 38%; left: 27%;}
+	.w {top: 38%; left: 36%;}
+	.x {top: 38%; left: 45%;}
+	.y {top: 38%; left: 54%;}
+	.z {top: 38%; left: 63%;}
+
+	.space {
+		top: 56%;
+		left: 24%;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#keyboard span {
+		font-size: 45px;
+	}
+}
+
+.navbar {
+	bottom: -40px;
+}

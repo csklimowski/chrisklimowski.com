@@ -1,0 +1,38 @@
+---
+layout: project.jade
+title: 'Blast Down'
+description: "A game about testing the world's first jetpack."
+date: 2017-07-19
+url: /projects/jetpack
+thumbnail: /img/thumbnails/jetpack-preview.png
+---
+header
+    img(src='img/logo.png' alt='Dot Dungeons')
+section.text-content.centered
+    h2 Choose your platform:
+    ul.platform-choices
+        li.platform-choice
+            a(href='./web.html')
+                div.platform-icon
+                    i.fa.fa-fw.fa-desktop
+                div.platform-name.
+                    Desktop
+        li.platform-choice
+            a(href='./mobile.html')
+                div.platform-icon
+                    i.fa.fa-fw.fa-2x.fa-mobile
+                div.platform-name.
+                    Mobile
+style.
+    body {
+        background-color: #444;
+        color: #f4f4f4;
+    }
+
+    body a {
+        color: #f4f4f4;
+    }
+
+    .platform-choices .platform-choice a {
+        border-color: #f4f4f4;
+    }

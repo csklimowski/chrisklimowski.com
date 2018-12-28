@@ -1,0 +1,13 @@
+extends ./base.jade
+
+block head
+	if styles
+		each style in styles
+			link(rel='stylesheet', type='text/css', href=style)
+	if scripts
+		each script in scripts
+			script(type='text/javascript', src=script)
+
+block body
+	block project
+		!= contents
