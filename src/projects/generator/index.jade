@@ -1,18 +1,35 @@
 ---
-layout: project-small.jade
-title: 'Cave Generator'
-description: 'A simple algorithm with neat results.'
+layout: project.jade
+title: "Cave Generator"
+description: "A simple algorithm with neat results."
 date: 2016-09-07
-styles:
-    - /css/generator.css
+url: /projects/generator
+thumbnail: /img/thumbnails/generator-preview.png
 scripts:
     - /lib/phaser.min.js
     - generator.js
-url: /projects/generator
-thumbnail: /img/thumbnails/generator-preview.png
 ---
-section#options
-	label Size:
-	input(type='text', value='100')#size
-	button(onclick='generate()') Generate!
-section#game
+header
+    h1 Cave Generator
+section#content
+    div.options
+        label Size:
+        input(type='text', value='100')#size
+        button(onclick='generate()') Generate!
+    div.game-wrapper
+        div#game
+footer
+    p
+        a(href="/") More projects
+style.
+    .options {
+        text-align: center;
+        font-size: 20px;
+    }
+    label, input, button {
+        margin: 5px;
+        padding: 5px;
+    }
+    input {
+        max-width: 100px;
+    }
