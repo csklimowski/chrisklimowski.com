@@ -46,7 +46,7 @@ body {
     padding-top: 308px;
 
     #sky {
-        background-image: url('/img/construction/skyline.png');
+        background-image: url('img/skyline.png');
         background-position: 0 100%;
         background-repeat: repeat-x;
 
@@ -54,21 +54,21 @@ body {
             position: relative;
 
             #car {
-                background-image: url('/img/construction/car.png');
+                background-image: url('img/car.png');
                 position: absolute;
                 top: 0;
                 left: 0;
             }
 
             #arm {
-                background-image: url('/img/construction/arm.png');
+                background-image: url('img/arm.png');
                 -webkit-animation: arm 7s linear infinite;
                 animation: arm 7s linear infinite;
                 transform-origin: 230px 300px;
                 z-index: -1;
 
                 #ball {
-                    background-image: url('/img/construction/ball.png');
+                    background-image: url('img/ball.png');
                     -webkit-animation: ball 7s ease-in infinite;
                     animation: ball 7s ease-in infinite;
                     transform-origin: 40px 2px;
