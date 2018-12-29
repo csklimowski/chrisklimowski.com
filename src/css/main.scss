@@ -12,26 +12,22 @@ body {
 	a:hover, a:focus {
 		text-decoration: underline;
 	}
+	h1, h2, h3 {
+		font-family: $heading-font;
+	}
 }
 
 header {
 	text-align: center;
 	margin: 30px;
-	font-family: $heading-font;
 	img {
 		max-width: 100%;
 		height: auto;
 	}
 }
 
-#page-title {
-	font-size: 175%;
-	padding: 10px;
-	border-top: solid transparent 30px;
-	margin-top: 0;
-	font-family: $heading-font;
-	text-align: center;
-	transition: all 0.2s;
+#content {
+	margin: 50px auto;
 }
 
 footer {
@@ -46,9 +42,10 @@ footer {
 }
 
 .project-tiles {
-	margin-top: 50px;
-	display: flex;
+	max-width: 930px;
+	margin: 0px auto;
 	padding: 0;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	list-style-type: none;
@@ -112,29 +109,37 @@ footer {
 		margin: 5px;
 		border: 3px solid #333;
 		width: 100px;
-		height: 50px;
-		display: grid;
-		grid-template-columns: 20% 80%;
-		padding: 0 20px;
+		padding: 15px 20px;
 		border-radius: 10px;
-
-		.platform-icon {
-			align-self: center;
-		}
-
-		.platform-name {
-			align-self: center;
-		}
+		display: block;
 	}
 }
 
 .game-wrapper div {
 	max-height: 720px;
 	max-width: 1280px;
-	margin: 50px auto;
+	margin: 0px auto;
+	display: flex;
+	justify-content: center;
 }
 
-@media screen and (min-width: 750px) {
+.text-content {
+	max-width: 800px;
+	margin: 0 auto;
+
+	&.centered {
+		text-align: center;
+	}
+
+	p {
+		font-family: $content-font;
+		line-height: 1.5;
+		font-size: 110%;
+		margin: 20px;
+	}
+}
+
+@media screen and (min-width: 500px) {
 	.project-tiles {
 		.project-tile {
 			img {
@@ -161,48 +166,5 @@ footer {
 
 	footer {
 		font-size: 16px;
-	}
-}
-
-.text-content {
-	max-width: 800px;
-	margin: 0 auto;
-
-	h2 {
-		font-family: $heading-font;
-	}
-
-	&.centered {
-		text-align: center;
-	}
-
-	p {
-		font-family: $content-font;
-		line-height: 1.5;
-		font-size: 110%;
-		margin: 20px;
-
-		a {
-			color: #06f;
-
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
-
-	.video-wrapper {
-		position: relative;
-    	padding-bottom: 56.25%;
-    	height: 0;
-    	overflow: hidden;
-
-		iframe {
-		    position: absolute;
-		    top:0;
-		    left: 0;
-		    width: 100%;
-		    height: 100%;
-		}
 	}
 }
