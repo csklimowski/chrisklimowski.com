@@ -16,11 +16,11 @@ section#content
         label Size:
         input(type='text', value='100')#size
         button(onclick='generate()') Generate!
+        | &nbsp; &nbsp;
+        br
+        button(onclick='newColors()') Change Colors
     div.game-wrapper
         div#game
-footer
-    p
-        a(href="/") More projects
 style.
     .options {
         text-align: center;
@@ -31,5 +31,15 @@ style.
         padding: 5px;
     }
     input {
-        max-width: 100px;
+        max-width: 80px;
     }
+    .game-wrapper div {
+        max-height: 500px;
+        max-width: 5000px;
+    }
+    @media screen and (min-width: 500px) {
+        .options br {
+            display: none;
+        }
+    }
+
