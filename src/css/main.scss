@@ -6,7 +6,7 @@ body {
 	background-color: #f4f4f4;
 	color: #333;
 	a {
-		color: #333;
+		color: #59f;
 		text-decoration: none;
 	}
 	a:hover, a:focus {
@@ -37,9 +37,6 @@ footer {
 	font-family: $content-font;
 	font-size: 14px;
 	margin: 50px 20px;
-	a {
-		color: #59f;
-	}
 }
 
 .project-tiles {
@@ -109,6 +106,7 @@ footer {
 		font-weight: bold;
 		font-family: $content-font;
 		margin: 5px;
+		color: #333;
 		border: 3px solid #333;
 		padding: 15px 20px;
 		border-radius: 10px;
