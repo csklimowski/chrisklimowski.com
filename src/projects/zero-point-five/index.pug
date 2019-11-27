@@ -1,0 +1,20 @@
+extends ../../templates/project
+
+block head
+    script(src='/lib/phaser.min.js')
+    script(src='game.js')
+    title 0.5 A Presses
+
+block body
+    header
+        h1 0.5 A Presses
+    section#content
+        div.game-wrapper
+            div#game
+        div.text-content.centered
+            p
+                |I made this game in 24 hours for the 
+                a(href="https://itch.io/jam/gmtk-2018") 2018 Game Maker's Toolkit Jam
+                |!
+                br
+                |It placed 55th out of 1,047 entries.

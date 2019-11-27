@@ -1,0 +1,16 @@
+extends ../../templates/project
+
+block head
+    title Blast Down
+    script(src='/lib/js.cookie.js')
+    script(src='/lib/phaser.min.js')
+    script(src='web.js')
+
+block body
+    section#content
+        div.game-wrapper
+            div#game
+    style.
+        body {
+            background-color: #f4f4f4;
+        }

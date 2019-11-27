@@ -3,7 +3,7 @@ var Metalsmith = require('metalsmith'),
 	markdown = require('metalsmith-markdown'),
 	jade = require('metalsmith-jade'),
 	layouts = require('metalsmith-layouts'),
-	sass = require('metalsmith-sass'),
+	// sass = require('metalsmith-sass'),
 	autoprefixer = require('metalsmith-autoprefixer'),
 	watch = require('metalsmith-watch'),
 	serve = require('metalsmith-serve');
@@ -23,7 +23,7 @@ Metalsmith(__dirname)
 	.use(layouts({
 		engine: 'jade'
 	}))
-	.use(sass())
+	// .use(sass())
 	.use(autoprefixer())
 	.use(watch())
 	.use(serve({
