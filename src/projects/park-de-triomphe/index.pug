@@ -1,0 +1,26 @@
+extends ../../templates/project
+
+block head
+    title Park de Triomphe
+
+block body
+    header
+        h1
+            img(src='logo.png')
+    section#content
+        div.text-content
+            p <em>Park de Triomphe</em> is a handheld tile-laying game for 2-4 players. 
+            p One card at a time, each player designs their own 4-card park, while also 
+                | choosing one of the game-end awards that will be given out to decide the winner. 
+                | Ensure your victory by winning awards that other players have chosen... 
+                | or trick them into going for your own award, only to switch it out at the last minute!
+
+        div.text-content.centered
+            img(src='cards.png')
+        
+        div.text-content
+            p I made this game for Button Shy Games' <a href="https://youtu.be/uYABHcbmlgw">18-Card Challenge</a>, where it was a finalist.
+        
+        div.text-content.centered
+            a.download-button(href="https://docs.google.com/document/d/17mZBuAu3diSrOS-FnpifqCCG7pnH9N4DR8Chr1VIAkU/edit?usp=sharing") Download Rules
+            a.download-button(href="https://drive.google.com/file/d/1oBYqqiJKJL7_J5xahmGCE7KlVGfICZui/view?usp=sharing") Download Cards
