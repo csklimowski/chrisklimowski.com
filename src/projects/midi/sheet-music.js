@@ -116,8 +116,6 @@ const keys = {
             6: 'natural',
             9: ['sharp', 'flat'],
             11: ['sharp', 'flat'],
-
-            7: 'none'
         },
         shifts: {
             2: [0, -5],
