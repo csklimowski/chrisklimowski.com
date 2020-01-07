@@ -1,0 +1,60 @@
+extends ../../templates/project
+
+block head
+    title MIDI Sheet Music Visualizer
+    script(src='/lib/Tone.min.js')
+    script(src='sheet-music.js')
+
+block body
+    header
+        h1 MIDI Sheet Music Visualizer
+    section#content
+        div.text-content.centered
+            div.options
+                label(for="key-toggle") Key (Major): 
+                select#key-toggle
+                    option(value='c') C
+                    option(value='g') G
+                    option(value='d') D
+                    option(value='a') A
+                    option(value='e') E
+                    option(value='b') B
+                    option(value='gb') G&flat; / F&sharp;
+                    option(value='db') D&flat; / C&sharp;
+                    option(value='ab') A&flat; / G&sharp;
+                    option(value='eb') E&flat; / D&sharp;
+                    option(value='bb') B&flat; / A&sharp;
+                    option(value='f') F
+            div.options
+                label(for="acc-toggle") Accidentals: 
+                select#acc-toggle
+                    option(value='0') &sharp;
+                    option(value='1') &flat;
+            div.options
+                label(for='sound-box')
+                    input#sound-box(type='checkbox')
+                    |  Play sound
+            div#svg-container
+                svg#staff-svg(width='300' height='200')
+                    image#key-img(xlink:href='img/c.png' x='0' y='3' width='122px' height='187px')
+                    line(x1='0' y1='50' x2='300' y2='50' style='stroke:#000;stroke-width:2')
+                    line(x1='0' y1='60' x2='300' y2='60' style='stroke:#000;stroke-width:2')
+                    line(x1='0' y1='70' x2='300' y2='70' style='stroke:#000;stroke-width:2')
+                    line(x1='0' y1='80' x2='300' y2='80' style='stroke:#000;stroke-width:2')
+                    line(x1='0' y1='90' x2='300' y2='90' style='stroke:#000;stroke-width:2')
+                    line(x1='0' y1='110' x2='300' y2='110' style='stroke:#000;stroke-width:2')
+                    line(x1='0' y1='120' x2='300' y2='120' style='stroke:#000;stroke-width:2')
+                    line(x1='0' y1='130' x2='300' y2='130' style='stroke:#000;stroke-width:2')
+                    line(x1='0' y1='140' x2='300' y2='140' style='stroke:#000;stroke-width:2')
+                    line(x1='0' y1='150' x2='300' y2='150' style='stroke:#000;stroke-width:2')
+            p#midi-status
+    style.
+        .options {
+            margin: 10px;
+        }
+        #svg-container {
+            opacity: 25%;
+        }
+        #content {
+            min-height: calc(100% - 300px);
+        }
