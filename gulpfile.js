@@ -49,3 +49,4 @@ function watchSrc() {
 }
 
 exports.default = series(compile, serveDist, watchSrc);
+exports.compile = compile;

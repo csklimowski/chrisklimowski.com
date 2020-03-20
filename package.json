@@ -11,7 +11,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp compile",
+    "dev": "gulp",
+    "test": "gulp compile"
   },
   "author": "Chris Klimowski"
 }
