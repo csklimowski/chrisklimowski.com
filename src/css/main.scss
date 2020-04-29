@@ -29,6 +29,10 @@ header {
 #content {
 	font-family: $content-font;
 	margin: 50px auto;
+
+	h1 {
+		text-align: center;
+	}
 }
 
 footer {
@@ -41,7 +45,7 @@ footer {
 
 .project-tiles {
 	max-width: 930px;
-	margin: 0px auto;
+	margin: 0px auto 50px auto;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
