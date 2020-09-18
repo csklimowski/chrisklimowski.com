@@ -1,0 +1,26 @@
+extends ../../templates/project
+
+block head
+    title Tommy Nook Browser Extension
+
+block body
+    header
+        h1 Tommy Nook Browser Extension
+    section#content
+        div.text-content.centered
+            img(src="tommy-icon.png", alt="Tommy Nook icon")
+        div.text-content
+            p <strong>Tommy Nook</strong> is a browser extension that occasionally 
+                | repeats the last word of a paragraph in small text, just like when 
+                | talking to Timmy and Tommy from Animal Crossing!
+
+            p You can get it for Chrome or Firefox using the links below, or view the source code 
+                a(href="https://github.com/csklimowski/tommy-extension") here
+                | .
+        
+        div.text-content.centered
+            p
+                a(href="https://chrome.google.com/webstore/detail/tommy/higclgihaoclpabfngjkpihkkdfbgihh") Chrome Web Store
+            p
+                a(href="https://addons.mozilla.org/en-US/firefox/addon/tommy-nook/") Firefox Add-Ons
+
