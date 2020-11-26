@@ -5,7 +5,23 @@ block head
 
 block body
 	section#content
+		div.text-content
+			p.minor
+				| This is the home of projects by Chris Klimowski.
+				| You can also find me on 
+				a(href="https://github.com/csklimowski") GitHub
+				|, 
+				a(href="https://www.linkedin.com/in/chris-klimowski-725218104/") LinkedIn
+				|, or 
+				a(href="https://twitter.com/csklimowski") Twitter
+				|.
 		ul.project-tiles
+			li.project-tile
+				a(href='/projects/moving-pictures')
+					img(src='/img/thumbnails/moving-pictures-preview.png')
+					div.project-info
+						div.project-title Moving Pictures
+						div.project-description A cooperative card game about storyboarding.
 			li.project-tile
 				a(href='/projects/tommy')
 					img(src='/img/thumbnails/tommy-preview.png')
@@ -78,12 +94,4 @@ block body
 						div.project-description A game of hide-and-seek for two players on one keyboard.
 
 block footer
-	p
-		| This is the home of projects by Chris Klimowski.
-		| You can also find me on 
-		a(href="https://github.com/csklimowski") GitHub
-		|, 
-		a(href="https://www.linkedin.com/in/chris-klimowski-725218104/") LinkedIn
-		|, or 
-		a(href="https://twitter.com/csklimowski") Twitter
-		|.
+	p &copy; 2015-2020 Chris Klimowski
