@@ -1,4 +1,4 @@
-html
+html(lang='en')
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -7,6 +7,15 @@ html
 		link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css')
 		link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans')
 		link(rel='stylesheet', type='text/css', href='/css/main.css')
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-T0E3RWPCCS"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-T0E3RWPCCS');
+		</script>
+
 		block head
 	body
 		block body
