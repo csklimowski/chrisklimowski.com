@@ -15,7 +15,7 @@ block body
         div#app.text-content.centered
             pre(class="game-log") {{ log }}
             div(v-if="decision === INITIAL_CARDS")
-                b Choose cards
+                b Choose your cards
                 div.card-row.hand-2
                     button(v-for="card in gameState.hand2" v-on:click="toHand1(card)").
                         {{ CARDS[card.id].name }}
@@ -24,7 +24,7 @@ block body
                     button(v-for="card in gameState.hand1" v-on:click="toHand2(card)").
                         {{ CARDS[card.id].name }}
                 div(class="button-row")
-                    button(v-on:click="proceed" :disabled="gameState.hand2.length !== 7") Confirm
+                    button(v-on:click="proceed" :disabled="gameState.hand2.length !== 7") Start game
             
             div(v-if="decision === PLAYER_TURN")
                 div.card-row.hand-1
@@ -68,7 +68,7 @@ block body
             div(class="button-row")
                 button(v-on:click="restart") Restart
             
-            p This is an AI opponent for <a href="https://boardgamegeek.com/boardgame/286109/hierarchy">Hierarchy</a> by Hugo Kawatama.
+            p This is an AI opponent for <a href="https://boardgamegeek.com/boardgame/286109/hierarchy">Hierarchy</a> by Hugo Kawamata.
             p.
                 Shuffle and deal the cards for a 2-player game, then pick your hand and input your moves above as you make them.
                 The AI will tell you its next move and try to outsmart you!
