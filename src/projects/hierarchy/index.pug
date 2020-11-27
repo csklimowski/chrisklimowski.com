@@ -1,0 +1,78 @@
+extends ../../templates/project
+
+block head
+    title Hierarchy AI
+    script(src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js")
+    script(src='hierarchy.js')
+    link(rel="stylesheet", href="hierarchy.css")
+    
+    
+
+block body
+    header
+        h1 Hierarchy AI
+    section#content
+        div#app.text-content.centered
+            pre(class="game-log") {{ log }}
+            div(v-if="decision === INITIAL_CARDS")
+                b Choose cards
+                div.card-row.hand-2
+                    button(v-for="card in gameState.hand2" v-on:click="toHand1(card)").
+                        {{ CARDS[card.id].name }}
+                b(v-if="gameState.hand1.length > 0") Your hand:
+                div.card-row.hand-1
+                    button(v-for="card in gameState.hand1" v-on:click="toHand2(card)").
+                        {{ CARDS[card.id].name }}
+                div(class="button-row")
+                    button(v-on:click="proceed" :disabled="gameState.hand2.length !== 7") Confirm
+            
+            div(v-if="decision === PLAYER_TURN")
+                div.card-row.hand-1
+                    button(
+                        v-for="card in gameState.hand1"
+                        v-on:click="playCard(card)"
+                        :disabled="!CARDS[card.id].canPlay(gameState, 1)"
+                    ) {{ CARDS[card.id].name }}
+
+            div(v-if="decision === IMPOSTER_CHOICE")
+                div.card-row.hand-2
+                    button(
+                        v-for="card in gameState.line.filter((cs, i) => cs.owner === 2 && i < gameState.line.length-1 && CARDS[cs.id].canPlay(gameState, 1))"
+                        v-on:click="chooseImposter(card)"
+                    ) {{ CARDS[card.id].name }}
+
+            div(v-if="decision === SURGEON_CHOICE_1")
+                div.card-row.hand-2
+                    button(
+                        v-for="card in gameState.line.filter((cs, i) => cs.owner === 2 && i < gameState.line.length-1)"
+                        v-on:click="chooseSurgeon1(card)"
+                    ) {{ CARDS[card.id].name }}
+
+            div(v-if="decision === SURGEON_CHOICE_2")
+                div.card-row.hand-2
+                    button(
+                        v-for="card in gameState.line.filter((cs, i) => cs.owner === 2 && i < gameState.line.length-1)"
+                        v-on:click="chooseSurgeon2(card)"
+                    ) {{ CARDS[card.id].name }}
+            
+            div(v-if="decision === TOWER_CHOICE")
+                div.card-row.hand-1
+                    button(
+                        v-for="card in gameState.hand1.filter((cs, i) => cs.id !== 4)"
+                        v-on:click="chooseTower(card)"
+                    ) {{ CARDS[card.id].name }}
+
+            pre(v-if="decision === DEFEAT" class="game-log") You lose!
+            pre(v-if="decision === VICTORY" class="game-log") You win!
+
+            div(class="button-row")
+                button(v-on:click="restart") Restart
+            
+            p This is an AI opponent for <a href="https://boardgamegeek.com/boardgame/286109/hierarchy">Hierarchy</a> by Hugo Kawatama.
+            p.
+                Shuffle and deal the cards for a 2-player game, then pick your hand and input your moves above as you make them.
+                The AI will tell you its next move and try to outsmart you!
+            p.
+                Hierarchy is available from
+                <a href="https://buttonshygames.com/products/hierarchy">Button Shy Games</a> and
+                <a href="https://www.pnparcade.com/search?q=hierarchy">PNPArcade</a>.
