@@ -1,0 +1,100 @@
+#app {
+    max-width: 650px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: auto 40px auto;
+    grid-auto-flow: row;
+
+    &>div {
+        position: relative;
+    }
+}
+
+#legend {
+    .heading {
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 50%;
+        text-align: right;
+        right: -70%;
+        width: 200%;
+    }
+
+    .colors {
+        font-size: 70%;
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        width: 100%;
+    }
+}
+
+#playercount {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 120%;
+}
+
+#sortbuttons {
+    display: grid;
+    grid-template-columns: 9.18% 9.18% 9.18% 9.18% 9.18% 9.18% 9.18% 9.18% 9.18% 9.18%;
+    padding-left: 5.9%;
+    padding-bottom: 10px;
+    gap: 0.8%;
+
+    button {
+        background-color: #555;
+        font-family: 'Oswald', sans-serif;
+        border-radius: 3px;
+        padding: 0;
+        border-width: 0;
+        color: #fff;
+        font-size: 130%;
+        cursor: pointer;
+
+    }
+}
+
+#matrix {
+    display: grid;
+    grid-template-rows: 40px;
+    gap: 10px;
+
+    .matrix-row {
+        display: grid;
+        padding-left: 5.9%;
+        position: absolute;
+        height: 40px;
+        width: 92.5%;
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        padding-left: 6%;
+        padding-right: 0.5%;
+    }
+}
+
+#list {
+    display: grid;
+    grid-template-rows: 40px;
+    gap: 10px;
+    position: relative;
+
+    .list-item {
+        width: 100%;
+        position: absolute;
+        height: 40px;
+        text-align: center;
+
+        img {
+            max-height: 40px;
+        }
+    }
+}
+
+
+
+body {
+    /* background-color: #2B474E; */
+    background-color: #303537;
+    color: #fff;
+}

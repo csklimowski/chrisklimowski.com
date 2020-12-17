@@ -1,0 +1,42 @@
+extends ../../templates/project
+
+block head
+    title BGG Player Count Data
+    script(src='bgg-data.js')
+    script(src="https://d3js.org/d3.v6.min.js")
+    link(rel="stylesheet", href="bgg-data.css")
+
+block body
+    div#app
+        div#legend
+            div.heading Number of games
+            div.colors
+                div
+                    svg(width="15" height="10")
+                        rect(width="10" height="10" style="fill:#CDF6FF")
+                    | Best
+                div
+                    svg(width="15" height="10")
+                        rect(width="10" height="10" style="fill:#75DAF0")
+                    | Recommended
+                div
+                    svg(width="15" height="10")
+                        rect(width="10" height="10" style="fill:#3098AF")
+                    | Supported
+        div#gamegraph
+            svg
+        div#playercount Player counts
+        div#sortbuttons
+            button(onclick="resort(1)") 1
+            button(onclick="resort(2)") 2
+            button(onclick="resort(3)") 3
+            button(onclick="resort(4)") 4
+            button(onclick="resort(5)") 5
+            button(onclick="resort(6)") 6
+            button(onclick="resort(7)") 7
+            button(onclick="resort(8)") 8
+            button(onclick="resort(9)") 9
+            button(onclick="resort(9)") 10
+        div#list
+        div#matrix
+    button(onclick="request()")
