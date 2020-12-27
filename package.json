@@ -9,7 +9,9 @@
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "express": "^4.17.1"
+  },
   "scripts": {
     "build": "gulp compile",
     "dev": "gulp",
