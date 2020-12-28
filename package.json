@@ -4,10 +4,12 @@
   "description": "Personal website build in Metalsmith",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.21.1",
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "xml2json": "^0.12.0"
   },
   "devDependencies": {
     "express": "^4.17.1"
@@ -15,6 +17,7 @@
   "scripts": {
     "build": "gulp compile",
     "dev": "gulp",
+    "server": "node ./server",
     "test": "gulp compile"
   },
   "author": "Chris Klimowski"

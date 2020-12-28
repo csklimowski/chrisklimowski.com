@@ -1,4 +1,5 @@
 const express = require('express');
+const apiRoutes = require('./api');
 const path = require('path');
 
 // initialize server
@@ -7,6 +8,7 @@ app.use(express.json());
 
 // serve static files
 app.use('/', express.static(path.resolve('./dist')));
+app.use('/api/', apiRoutes);
 
 // test API
 app.get('/api/test', (req, res) => {
