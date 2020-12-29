@@ -3,6 +3,28 @@ body {
     color: #fff;
 }
 
+@media screen and (max-width: 500px) {
+    #app {
+        #data-dashboard {
+            #legend {
+                .heading {
+                    font-size: 70%;
+                    top: 30%;
+                }
+
+                div.colors {
+                    transform: scale(0.5);
+                    left: -30%;
+                    width: 200%;
+                }
+            }
+            #player-count {
+                font-size: 70% !important;
+            }
+        }
+    }
+}
+
 #app {
     margin: 50px auto;
     max-width: 650px;

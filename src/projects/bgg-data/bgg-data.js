@@ -70,7 +70,7 @@ async function fetchTop100() {
             elements.dataDashboard.style.display = 'grid';
             elements.dashboardTitle.style.display = 'block';
             elements.intro.style.display = 'none';
-            elements.dashboardTitle.innerText = username + "'s collection";
+            elements.dashboardTitle.innerText = "BGG Top 200";
             visualize(json);
         } else {
             let error = await res.text();
@@ -169,9 +169,11 @@ function visualize (gameStats) {
         .data(gameStats)
         .join('div')
         .attr('class', 'list-item')
+        
         // .text(d => d.name)
+        .append('a').attr('href', d => 'https://boardgamegeek.com/boardgame/' + d.id)
         .append('img').attr('src', d => d.thumbnail)
-        .attr('title', d => d.rating)
+        .attr('title', d => d.name)
     
 
     d3.select("#matrix").selectAll("div")

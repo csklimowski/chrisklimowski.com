@@ -12,24 +12,32 @@ function arr(item) {
 router.get('/bggdata', async (req, res) => {
     let username = req.query.username;
     let gameIds = [];
+    let userRatings = {};
 
     try {
         if (username) {
             let res = await axios.get('https://boardgamegeek.com/xmlapi2/collection', {
                 params: {
                     username: username,
+                    stats: '1',
                     own: '1'
                 }
             });
             let data = JSON.parse(xml2json.toJson(res.data));
-
-            gameIds = arr(data.items.item).map(g => g.objectid);
+            for (let game of arr(data.items.item)) {
+                gameIds.push(game.objectid);
+                if (!isNaN(parseInt(game.stats.rating.value))) {
+                    userRatings[game.objectid] = parseInt(game.stats.rating.value);
+                }
+            }
         } else {
-            let res = await axios.get('https://boardgamegeek.com/browse/boardgame');
+            let res1 = await axios.get('https://boardgamegeek.com/browse/boardgame');
+            let res2 = await axios.get('https://boardgamegeek.com/browse/boardgame/page/2');
+            let text = res1.data + res2.data;
             let re = /boardgame\/(\d+)\//g;
             let match;
             do {
-                match = re.exec(res.data);
+                match = re.exec(text);
                 if (match) {
                     if (gameIds[gameIds.length-1] !== match[1]) {
                         gameIds.push(match[1]);
@@ -72,6 +80,7 @@ router.get('/bggdata', async (req, res) => {
                 supportedMin: parseInt(game.minplayers.value),
                 supportedMax: parseInt(game.maxplayers.value),
                 rating: parseFloat(game.statistics.ratings.average.value),
+                id: game.id,
                 thumbnail: game.thumbnail
             };
 
@@ -108,6 +117,11 @@ router.get('/bggdata', async (req, res) => {
 
             for (let i = gameData.supportedMin; i < gameData.supportedMax+1 && i < 11; i++) {
                 gameData.playerCounts[i-1].supported = true;
+            }
+
+            if (userRatings[gameData.id]) {
+                gameData.rating /= 100;
+                gameData.rating += userRatings[gameData.id];
             }
 
             gameStats.push(gameData);
