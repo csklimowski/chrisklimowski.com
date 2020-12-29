@@ -16,9 +16,8 @@
   },
   "scripts": {
     "build": "gulp compile",
-    "dev": "gulp",
-    "server": "node ./server",
-    "test": "gulp compile"
+    "frontend": "gulp",
+    "server": "node ./server"
   },
   "author": "Chris Klimowski"
 }

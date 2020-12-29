@@ -1,9 +1,6 @@
 const { src, dest, parallel, series, watch } = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
-const browserSync = require('browser-sync');
-
-const server = browserSync.create();
 
 function html() {
     return src('src/**/*.pug')
@@ -30,23 +27,9 @@ function copy() {
 
 const compile = parallel(html, css, copy);
 
-function serveDist(done) {
-    server.init({
-        server: {
-            baseDir: './dist'
-        }
-    });
-    done();
-}
-
-function reload(done) {
-    server.reload();
-    done();
-}
-
 function watchSrc() {
-    return watch('src/', series(compile, reload));
+    return watch('src/', compile);
 }
 
-exports.default = series(compile, serveDist, watchSrc);
+exports.default = series(compile, watchSrc);
 exports.compile = compile;
