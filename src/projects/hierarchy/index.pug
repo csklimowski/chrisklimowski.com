@@ -11,8 +11,8 @@ block head
 block body
     header
         h1 Hierarchy AI
-    section#content
-        div#app.text-content.centered
+    main
+        div#app.content.centered
             pre(class="game-log") {{ log }}
             div(v-if="decision === INITIAL_CARDS")
                 b Choose your cards

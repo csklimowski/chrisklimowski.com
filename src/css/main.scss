@@ -1,9 +1,13 @@
 $heading-font: 'Oswald', sans-serif;
 $content-font: 'Open Sans', sans-serif;
 
+html {
+	height: 100%;
+}
+
 body {
 	position: relative;
-	background-color: #f4f4f4;
+	background-color: #eee;
 	color: #333;
 	a {
 		color: #59f;
@@ -15,6 +19,17 @@ body {
 	h1, h2, h3, h4, h5, h6, .heading {
 		font-family: $heading-font;
 	}
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.content-wrapper {
+	flex: 1 0 auto;
+}
+
+.centered {
+	text-align: center;
 }
 
 header {
@@ -26,7 +41,7 @@ header {
 	}
 }
 
-#content {
+main {
 	font-family: $content-font;
 	margin: 50px auto;
 
@@ -35,12 +50,28 @@ header {
 	}
 }
 
+.social-icon {
+	margin: 0 10px;
+	color: #333;
+	svg {
+		width: 25px;
+	}
+}
+
 footer {
+	flex-shrink: 0;
 	color: #888;
 	text-align: center;
 	font-family: $content-font;
 	font-size: 14px;
 	margin: 50px 20px;
+
+	.social-icon {
+		margin: 0 10px;
+		svg {
+			width: 25px;
+		}
+	}
 }
 
 .project-tiles {
@@ -125,7 +156,7 @@ footer {
 	justify-content: center;
 }
 
-.video-content {
+.video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%;
 	height: 0;
@@ -139,7 +170,7 @@ footer {
 	}
 }
 
-.text-content {
+.content {
 	max-width: 800px;
 	margin: 40px auto;
 
@@ -190,9 +221,6 @@ footer {
 		}
 	}
 
-	&.centered {
-		text-align: center;
-	}
 
 	p {
 		font-family: $content-font;
@@ -203,6 +231,7 @@ footer {
 		&.minor {
 			font-size: 100%;
 			color: #888;
+			text-align: center;
 		}
 	}
 }
@@ -227,7 +256,7 @@ footer {
 		}
 	}
 
-	.text-content {
+	.content {
 		h2 {
 			font-size: 34px;
 		}
@@ -235,5 +264,15 @@ footer {
 
 	footer, .minor {
 		font-size: 16px;
+	}
+}
+
+
+@media screen and (min-width: 700px) {
+	.social-icon {
+		margin: 0 25px;
+		svg {
+			width: 50px;
+		}
 	}
 }
