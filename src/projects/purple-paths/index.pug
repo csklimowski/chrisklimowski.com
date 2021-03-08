@@ -1,0 +1,14 @@
+extends ../../templates/project
+
+block head
+    script(src='/lib/phaser3.min.js')
+    script(src='game.js')
+    title Purple Paths
+
+block body
+    main
+        div.game-wrapper
+            div#game
+        div.content.centered
+            p.
+                I made this game for <a href="https://itch.io/jam/eggplant-podcast-community-game-jam">the first  Eggplant Podcast Community Game Jam</a>.

@@ -1,0 +1,26 @@
+extends ../../templates/project
+
+block head
+    title OGOPOGO: a game about palindromes
+    link(rel="stylesheet", href="ogopogo.css")
+
+block body
+    header
+        div.ogopogo-letters
+            img(src="o.png", class="o1" alt="letter o")
+            img(src="g.png", class="g2" alt="letter g")
+            img(src="o.png", class="o3" alt="letter o")
+            img(src="p.png", class="p4" alt="letter p")
+            img(src="o.png", class="o5" alt="letter o")
+            img(src="g.png", class="g6" alt="letter g")
+            img(src="o.png", class="o7" alt="letter o")
+        p.subtitle a game about palindromes
+    main
+        div.content
+            p.centered
+                a.ogopogo-game-link(href="game.html")
+                    | Play now in your browser<br><span class="small">(Chrome recommended)</span>
+            p.
+                OGOPOGO is a full-page, native-resolution web game. If you experience performance issues, try playing the fixed-resolution version here.
+            p.
+                Designed and developed by Chris Klimowski.

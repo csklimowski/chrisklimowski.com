@@ -1,0 +1,115 @@
+$content-font: 'Open Sans', sans-serif;
+
+body {
+    background: rgb(14,23,37);
+
+    background: linear-gradient(0deg, #0D1221 0%, #30427B 100%);
+    color: #fff;
+}
+
+.social-icon {
+    color: #fff;
+}
+
+@keyframes letter {
+    0% { transform: translate(0, -30px); }
+    50% { transform: translate(0, 30px); }
+    100% { transform: translate(0, -30px); }
+}
+
+@keyframes letter-mobile {
+    0% { transform: translate(0, -15px); }
+    50% { transform: translate(0, 15px); }
+    100% { transform: translate(0, -15px); }
+}
+
+header {
+    margin: 50px auto;
+	max-width: 800px;
+}
+
+.ogopogo-letters {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    img {
+        animation: letter-mobile ease-in-out 3s infinite alternate;
+        margin: 1%;
+        max-width: 8%;
+
+        &.o1 { animation-delay: -.2s; }
+        &.g2 { animation-delay: -.4s; }
+        &.o3 { animation-delay: -.6s; }
+        &.p4 { animation-delay: -.8s; }
+        &.o5 { animation-delay: -1.0s; }
+        &.g6 { animation-delay: -1.2s; }
+        &.o7 { animation-delay: -1.4s; }
+    }
+}
+
+.subtitle {
+    font-family: $content-font;
+    font-size: 85%;
+}
+
+.ogopogo-game-link {
+    color: #fff;
+    font-size: 85%;
+    padding: 15px;
+    display: inline-block;
+    font-weight: bold;
+    background: linear-gradient(0deg, #872626 0%, #CE4545 100%);
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    &:hover, &:focus {
+        text-decoration: none;
+        background: linear-gradient(0deg, #A22D2D 0%, #D66262 100%);
+    }
+
+    .small {
+        font-weight: normal;
+        font-size: 70%;
+    }
+}
+
+.content p {
+    font-size: 85%;
+}
+
+@media screen and (min-width: 600px) {
+    
+    header {
+        margin: 70px auto;
+        max-width: 800px;
+    }
+    
+    .ogopogo-letters {
+        margin-top: 100px;
+        margin-bottom: 80px;
+        img {
+            animation-name: letter;
+    
+            &.o1 { animation-delay: -.2s; }
+            &.g2 { animation-delay: -.4s; }
+            &.o3 { animation-delay: -.6s; }
+            &.p4 { animation-delay: -.8s; }
+            &.o5 { animation-delay: -1.0s; }
+            &.g6 { animation-delay: -1.2s; }
+            &.o7 { animation-delay: -1.4s; }
+        }
+    }
+    
+    .subtitle {
+        font-size: 130%;
+    }
+    
+    .ogopogo-game-link {
+        font-size: 130%;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    .content p {
+        font-size: 110%;
+    }
+}
