@@ -1,10 +1,12 @@
 $content-font: 'Open Sans', sans-serif;
 
 body {
-    background: rgb(14,23,37);
-
-    background: linear-gradient(0deg, #0D1221 0%, #30427B 100%);
     color: #fff;
+    background: #0d1221;
+}
+
+.content-wrapper {
+    background: linear-gradient(180deg, #30427B 0%, #0D1221 100%);
 }
 
 .social-icon {
