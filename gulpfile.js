@@ -20,7 +20,8 @@ function copy() {
             'src/**/*.png',
             'src/**/*.ico',
             'src/**/*.ogg',
-            'src/**/*.fnt'
+            'src/**/*.fnt',
+            'src/**/*.html'
         ])
         .pipe(dest('dist'));
 }
