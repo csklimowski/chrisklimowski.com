@@ -90,6 +90,12 @@ footer {
 		margin: 5px;
 		overflow: hidden;
 
+		&.big {
+			img {
+				height: 325px;
+			}
+		}
+
 		img {
 			height: 160px;
 			display: block;
@@ -243,6 +249,11 @@ footer {
 		.project-tile {
 			img {
 				height: 200px;
+			}
+			&.big {
+				img {
+					height: 400px;
+				}
 			}
 			.project-info {
 				top: 75%;
