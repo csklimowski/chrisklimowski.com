@@ -1,0 +1,71 @@
+$content-font: 'Open Sans', sans-serif;
+
+body {
+    color: #fff;
+    background: #040A2E;
+}
+
+.content-wrapper {
+    background: linear-gradient(180deg, #223584 0%, #040A2E 100%);
+}
+
+.social-icon {
+    color: #fff;
+}
+
+header {
+    margin: 50px auto;
+	max-width: 800px;
+}
+
+.subtitle {
+    font-family: $content-font;
+    font-size: 85%;
+}
+
+.ogopogo-game-link {
+    color: #fff;
+    font-size: 85%;
+    padding: 15px;
+    display: inline-block;
+    font-weight: bold;
+    background: linear-gradient(0deg, #872626 0%, #CE4545 100%);
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    &:hover, &:focus {
+        text-decoration: none;
+        background: linear-gradient(0deg, #A22D2D 0%, #D66262 100%);
+    }
+
+    .small {
+        font-weight: normal;
+        font-size: 70%;
+    }
+}
+
+.content p {
+    font-size: 85%;
+}
+
+@media screen and (min-width: 600px) {
+    
+    header {
+        margin: 70px auto;
+        max-width: 800px;
+    }
+    
+    .subtitle {
+        font-size: 130%;
+    }
+    
+    .ogopogo-game-link {
+        font-size: 130%;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    .content p {
+        font-size: 110%;
+    }
+}
