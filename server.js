@@ -1,3 +1,5 @@
+require('./.pnp.cjs').setup();
+
 const express = require('express');
 const apiRoutes = require('./api');
 const path = require('path');
@@ -14,7 +16,7 @@ app.use('/projects/otteretto', (req, res) => {
     return res.redirect(301, 'https://otteretto.app');
 });
 
-app.use('/', express.static(path.resolve('./dist')));
+app.use('/', express.static(path.resolve('./_site')));
 app.use('/api/', apiRoutes);
 
 // test API

@@ -4,11 +4,12 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-pug": "^1.0.0",
+    "express": "^5.2.1",
     "sass": "^1.97.2"
   },
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve"
-  },
-  "type": "module"
+    "dev": "eleventy --serve",
+    "server": "node server.js" 
+  }
 }
