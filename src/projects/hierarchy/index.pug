@@ -1,7 +1,7 @@
 extends ../../templates/project
 
 block head
-    title Hierarchy AI
+    title Hierarchy Bot
     script(src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js")
     script(src='hierarchy.js')
     link(rel="stylesheet", href="hierarchy.css")
@@ -10,7 +10,7 @@ block head
 
 block body
     header
-        h1 Hierarchy AI
+        h1 Hierarchy Bot
     main
         div#app.content.centered
             pre(class="game-log") {{ log }}
@@ -68,10 +68,10 @@ block body
             div(class="button-row")
                 button(v-on:click="restart") Restart
             
-            p This is an AI opponent for <a href="https://boardgamegeek.com/boardgame/286109/hierarchy">Hierarchy</a> by Hugo Kawamata.
+            p This is an automated opponent for <a href="https://boardgamegeek.com/boardgame/286109/hierarchy">Hierarchy</a> by Hugo Kawamata.
             p.
                 Shuffle and deal the cards for a 2-player game, then pick your hand and input your moves above as you make them.
-                The AI will tell you its next move and try to outsmart you!
+                The bot will tell you its next move and try to outsmart you!
             p.
                 Hierarchy is available from
                 <a href="https://buttonshygames.com/products/hierarchy">Button Shy Games</a> and
