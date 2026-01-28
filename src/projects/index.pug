@@ -1,0 +1,32 @@
+extends ../templates/base
+
+block head
+	title Chris Klimowski - Game Designer, Software Engineer
+
+block body
+	main
+		ul.project-tiles
+			li.project-tile
+				a(href='/projects/hierarchy')
+					img(src='/img/thumbnails/hierarchy-preview.png')
+					div.project-info
+						div.project-title Hierarchy Bot
+						div.project-description An automated opponent for Hierarchy by Hugo Kawamata.
+			li.project-tile
+				a(href='/projects/midi')
+					img(src='/img/thumbnails/midi-preview.png')
+					div.project-info
+						div.project-title Sheet Music Visualizer
+						div.project-description Learn sheet music notes using a MIDI keyboard.
+			li.project-tile
+				a(href='/projects/generator')
+					img(src='/img/thumbnails/generator-preview.png')
+					div.project-info
+						div.project-title Cave Generator
+						div.project-description A simple algorithm with neat results.
+			li.project-tile
+				a(href='/projects/keyboard')
+					img(src='/img/thumbnails/keyboard-preview.png')
+					div.project-info
+						div.project-title The Useless Keyboard
+						div.project-description No, really, it's completely useless.

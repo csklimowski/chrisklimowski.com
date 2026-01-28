@@ -1,0 +1,131 @@
+
+@font-face {
+	font-family: 'Ostrich Sans Black';
+	src:
+		local('Ostrich Sans Black'),
+		url('/font/OstrichSans-Black.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Ostrich Sans Medium';
+	src:
+		url('/font/OstrichSans-Medium.otf') format('opentype');
+}
+
+$frontpage-font: 'Ostrich Sans Black', sans-serif;
+$deemph-font: 'Ostrich Sans Medium', sans-serif;
+
+$background-color: #F1EADD;
+
+$color-li: #CD1843;
+$color-itch: #57B993;
+$color-mp: #4FA8F6;
+$color-sss: #C6B931;
+$color-guy: #E788C7;
+$color-bs: #E29A23;
+$color-ott: #0637D1;
+$color-dis: #8B00FF;
+
+
+body {
+    background-color: $background-color;
+}
+
+.frontpage {
+    
+	max-width: 500px;
+	margin: 20px auto;
+
+	font-family: $frontpage-font;
+	font-size: 22px;
+
+    a {
+		text-decoration: underline;
+	}
+
+	a:hover, a:focus {
+		text-decoration: underline;
+	}
+
+    p {
+        line-height: 1.1;
+		margin: 24px 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 0 50px;
+    }
+}
+
+
+a.color-li { color: $color-li; }
+a.color-itch { color: $color-itch; }
+a.color-mp { color: $color-mp; }
+a.color-sss { color: $color-sss; }
+a.color-guy { color: $color-guy; }
+a.color-bs { color: $color-bs; }
+a.color-ott { color: $color-ott; }
+a.color-dis { color: $color-dis; }
+
+a.color-li:hover, a.color-li:focus { background-color: $color-li; color: #fff; text-decoration: none; }
+a.color-itch:hover, a.color-itch:focus { background-color: $color-itch; color: #fff; text-decoration: none; }
+a.color-mp:hover, a.color-mp:focus { background-color: $color-mp; color: #fff; text-decoration: none; }
+a.color-sss:hover, a.color-sss:focus { background-color: $color-sss; color: #fff; text-decoration: none; }
+a.color-guy:hover, a.color-guy:focus { background-color: $color-guy; color: #fff; text-decoration: none; }
+a.color-bs:hover, a.color-bs:focus { background-color: $color-bs; color: #fff; text-decoration: none; }
+a.color-ott:hover, a.color-ott:focus { background-color: $color-ott; color: #fff; text-decoration: none; }
+a.color-dis:hover, a.color-dis:focus { background-color: $color-dis; color: #fff; text-decoration: none; }
+
+.centered {
+	text-align: center;
+}
+
+.deemph {
+    font-family: $deemph-font;
+}
+
+.email {
+    font-size: 20px;
+}
+
+.lilguy {
+    max-width: 150px;
+    height: auto
+}
+
+
+@media screen and (min-width: 400px) {
+    .frontpage {
+        font-size: 26px;
+
+        p {
+            margin: 30px 20px;
+        }
+
+        ul {
+            margin-left: 100px;
+        }
+    }
+
+    .email {
+        font-size: 24px;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .frontpage {
+        font-size: 30px;
+        max-width: 700px;
+        p {
+            margin: 40px 60px;
+        }
+    }
+
+    .email {
+        font-size: 28px;
+    }
+}
+
