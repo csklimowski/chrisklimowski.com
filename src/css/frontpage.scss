@@ -37,7 +37,7 @@ body {
 	margin: 20px auto;
 
 	font-family: $frontpage-font;
-	font-size: 22px;
+	font-size: 24px;
 
     a {
 		text-decoration: underline;
@@ -49,7 +49,7 @@ body {
 
     p {
         line-height: 1.1;
-		margin: 24px 20px;
+		margin: 26px 20px;
     }
 
     ul {
@@ -96,7 +96,7 @@ a.color-dis:hover, a.color-dis:focus { background-color: $color-dis; color: #fff
 }
 
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 320px) {
     .frontpage {
         font-size: 26px;
 
@@ -105,12 +105,12 @@ a.color-dis:hover, a.color-dis:focus { background-color: $color-dis; color: #fff
         }
 
         ul {
-            margin-left: 100px;
+            margin-left: 75px;
         }
     }
 
     .email {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
