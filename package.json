@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve",
-    "server": "node server.js" 
-  }
+    "dev": "eleventy --serve"
+  },
+  "type": "module"
 }
